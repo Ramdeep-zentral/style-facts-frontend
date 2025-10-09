@@ -1,5 +1,6 @@
 import BlogCard from "@/components/custom/blogCard";
 import { Button } from "@/components/ui/button";
+import { Link } from "lucide-react";
 import React, { useState } from "react";
 
 const RecommendBlogs = ({ currentArticle }) => {
@@ -42,12 +43,14 @@ const RecommendBlogs = ({ currentArticle }) => {
           {recommended.length ? (
             <div className="grid lg:grid-cols-3 lg:gap-20 gap-10 mt-20 bg-dark">
               {recommended.map((blog) => (
+                <Link href={`/blog/${blog.slug}`} key={blog.id}>
                 <BlogCard
                   key={blog.id}
                   title={blog.title}
                   imageUrl={blog.image?.url}
                   date={blog.publishedDate}
                 />
+                </Link>
               ))}
             </div>
           ) : (
