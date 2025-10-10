@@ -27,17 +27,22 @@ const Filter = () => {
       <div className="lg:flex">
       <div className=" basis-8/12">
         <h4>Categories</h4>
-        <div className="flex flex-wrap gap-3 mt-5">
+        <ul className="flex flex-wrap gap-3 mt-5 list-none p-0 m-0">
           {categories.map((category) => (
-            <Link key={category.id} href={`/search/${category.name}`}>
-            <Button className={`${selectedCategory === category ? 'bg-black text-white' : ''}`} key={category.id} variant="filter" size="sm"
-              onClick={() => setSelectedCategory(category)}
-            >
-              {category.name}
-            </Button>
-            </Link>
+            <li key={category.id} className="m-0 p-0">
+              <Link href={`/search/${category.name}`}>
+                <Button
+                  className={`${selectedCategory === category ? 'bg-black text-white' : ''}`}
+                  variant="filter"
+                  size="sm"
+                  onClick={() => setSelectedCategory(category)}
+                >
+                  {category.name}
+                </Button>
+              </Link>
+            </li>
           ))}
-        </div>
+        </ul>
         </div>
       </div>
       <div className=" basis-4/12"></div>

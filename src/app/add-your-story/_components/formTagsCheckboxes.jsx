@@ -15,6 +15,8 @@ const FormTagsCheckboxes = ({ tags, selectedTags, onChange, error }) => {
   return (
     <div className="mb-6">
       <Label htmlFor="tags">Select your tags</Label>
+      {/* Hidden input to associate with the label for accessibility */}
+      <input id="tags" type="text" style={{ position: 'absolute', opacity: 0, width: 0, height: 0, pointerEvents: 'none' }} tabIndex={-1} aria-hidden="true" />
       <div className="grid grid-cols-2 gap-2 items-center mt-4">
         {tags.map((tag) => (
           <div key={tag.id} className="flex items-start gap-2">

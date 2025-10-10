@@ -13,7 +13,7 @@ const Header = () => {
           </div>
           
           
-          <Link href="/" className='logo'>Style•Facets</Link>
+          <Link href="/" className='logo'>Style•Facts</Link>
 
             <Link href="/add-your-story">
               <div className="font-outfit uppercase text-sm float-right absolute right-10 top-7">

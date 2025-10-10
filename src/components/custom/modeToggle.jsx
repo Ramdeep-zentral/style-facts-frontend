@@ -13,15 +13,20 @@ import {
 } from "@/components/ui/dropdown-menu"
 
 export function ModeToggle() {
-  const { setTheme } = useTheme()
-
+  const { setTheme, resolvedTheme } = useTheme();
+  const isDark = resolvedTheme === "dark";
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="link" size="icon">
+        <Button
+          variant="link"
+          size="icon"
+          aria-pressed={isDark}
+          aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
+        >
           <Sun className="stroke-white h-[1.2rem] w-[1.2rem] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />
           <Moon className="absolute h-[1.2rem] w-[1.2rem] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
-          <span className="sr-only">Toggle theme</span>
+          <span className="sr-only">{isDark ? "Switch to light mode" : "Switch to dark mode"}</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">

@@ -6,7 +6,8 @@ import { Button } from "@/components/ui/button";
 
 const SimpleMDE = dynamic(() => import("react-simplemde-editor"), { ssr: false });
 
-const FormMarkdownEditor = ({ label, value, onChange, error, generateByAi, aiLoading }) => (
+
+const FormMarkdownEditor = ({ label, value, onChange, error, generateByAi, aiLoading, name = "content" }) => (
   <div className="mb-6 relative">
     <Button
       onClick={generateByAi}
@@ -18,8 +19,8 @@ const FormMarkdownEditor = ({ label, value, onChange, error, generateByAi, aiLoa
     >
       {aiLoading ? 'Generating...' : 'Generate by AI'}
     </Button>
-    <Label>{label}</Label>
-    <SimpleMDE value={value} onChange={onChange} />
+    <Label htmlFor={name}>{label}</Label>
+    <SimpleMDE id={name} value={value} onChange={onChange} />
     {error && <p className="text-red-500 text-xs mt-1">{error}</p>}
   </div>
 );

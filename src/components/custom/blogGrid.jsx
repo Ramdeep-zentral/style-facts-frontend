@@ -42,7 +42,7 @@ const BlogGrid = () => {
           {/* First 3 blogs in 3 columns */}
           <div className="pb-28 lg:px-40">
             <div className="container">
-              <div className="grid lg:grid-cols-3 gap-20 mt-12">
+              <ul className="grid lg:grid-cols-3 gap-20 mt-12 list-none p-0 m-0">
                 {loading ? (
                   <>
                     <BlogCardSkeleton />
@@ -51,16 +51,18 @@ const BlogGrid = () => {
                   </>
                 ) : (
                   blogs.slice(0, Math.min(3, visibleCount)).map((blog) => (
-                    <Link href={`/blog/${blog.slug}`} key={blog.id}>
-                      <BlogCard
-                        title={blog.title}
-                        date={blog.publishedDate}
-                        imageUrl={blog.image?.url}
-                      />
-                    </Link>
+                    <li key={blog.id} className="m-0 p-0">
+                      <Link href={`/blog/${blog.slug}`}>
+                        <BlogCard
+                          title={blog.title}
+                          date={blog.publishedDate}
+                          imageUrl={blog.image?.url}
+                        />
+                      </Link>
+                    </li>
                   ))
                 )}
-              </div>
+              </ul>
             </div>
           </div>
 
@@ -68,7 +70,7 @@ const BlogGrid = () => {
           <div className="lg:px-40 border-y border-black">
             <div className="flex lg:flex-row flex-col justify-between my-28 gap-40">
               <div className="basis-[80vw]">
-                <div className="flex flex-col gap-20">
+                <ul className="flex flex-col gap-20 list-none p-0 m-0">
                   {loading ? (
                     <>
                       <BlogCardSkeleton grid={true} />
@@ -76,19 +78,21 @@ const BlogGrid = () => {
                     </>
                   ) : (
                     blogs.slice(3, Math.min(5, visibleCount)).map((blog) => (
-                      <Link href={`/blog/${blog.slug}`} key={blog.id}>
-                        <BlogCard
-                          key={blog.id}
-                          title={blog.title}
-                          date={blog.publishedDate}
-                          imageUrl={blog.image?.url}
-                          excerpt={blog.excerpt}
-                          grid={true}
-                        />
-                      </Link>
+                      <li key={blog.id} className="m-0 p-0">
+                        <Link href={`/blog/${blog.slug}`}>
+                          <BlogCard
+                            key={blog.id}
+                            title={blog.title}
+                            date={blog.publishedDate}
+                            imageUrl={blog.image?.url}
+                            excerpt={blog.excerpt}
+                            grid={true}
+                          />
+                        </Link>
+                      </li>
                     ))
                   )}
-                </div>
+                </ul>
               </div>
               <div className="basis-[20vw]">
                 <AuthorCard />
@@ -100,7 +104,7 @@ const BlogGrid = () => {
           {blogs.length >= 6 && visibleCount > 5 && (
             <div className="border-b border-black py-28 px-40">
               <div className="container">
-                <div className="grid grid-cols-3 gap-20 mt-12">
+                <ul className="grid grid-cols-3 gap-20 mt-12 list-none p-0 m-0">
                   {loading ? (
                     <>
                       <BlogCardSkeleton />
@@ -109,17 +113,19 @@ const BlogGrid = () => {
                     </>
                   ) : (
                     blogs.slice(5, visibleCount).map((blog) => (
-                      <Link href={`/blog/${blog.slug}`} key={blog.id}>
-                        <BlogCard
-                          key={blog.id}
-                          title={blog.title}
-                          date={blog.publishedDate}
-                          imageUrl={blog.image?.url}
-                        />
-                      </Link>
+                      <li key={blog.id} className="m-0 p-0">
+                        <Link href={`/blog/${blog.slug}`}>
+                          <BlogCard
+                            key={blog.id}
+                            title={blog.title}
+                            date={blog.publishedDate}
+                            imageUrl={blog.image?.url}
+                          />
+                        </Link>
+                      </li>
                     ))
                   )}
-                </div>
+                </ul>
               </div>
             </div>
           )}
@@ -134,21 +140,23 @@ const BlogGrid = () => {
       <div className="lg:hidden">
         <div className="pb-28 lg:px-40">
           <div className="container">
-            <div className="grid lg:grid-cols-3 gap-10">
+            <ul className="grid lg:grid-cols-3 gap-10 list-none p-0 m-0">
               {blogs.slice(0, visibleCount).map((blog) => (
-                <Link href={`/blog/${blog.slug}`} key={blog.id}>
-                  {loading ? (
-                    <BlogCardSkeleton />
-                  ) : (
-                    <BlogCard
-                      title={blog?.title}
-                      date={blog?.publishedDate}
-                      imageUrl={blog?.image?.url}
-                    />
-                  )}
-                </Link>
+                <li key={blog.id} className="m-0 p-0">
+                  <Link href={`/blog/${blog.slug}`}>
+                    {loading ? (
+                      <BlogCardSkeleton />
+                    ) : (
+                      <BlogCard
+                        title={blog?.title}
+                        date={blog?.publishedDate}
+                        imageUrl={blog?.image?.url}
+                      />
+                    )}
+                  </Link>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </div>
       </div>

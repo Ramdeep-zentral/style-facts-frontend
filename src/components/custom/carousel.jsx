@@ -39,7 +39,7 @@ const Carousel = () => {
   }, [current]);
 
   return (
-    <div className="lg:h-[95vh] h-[50vh] relative overflow-hidden">
+    <div className="lg:h-[95vh] h-[50vh] relative overflow-hidden bg-black">
       {/* Background image with fade effect */}
       <div
         className={`absolute inset-0 bg-center bg-cover lg:bg-fixed transition-opacity duration-700 ease-in-out ${fade ? 'opacity-100' : 'opacity-0'}`}

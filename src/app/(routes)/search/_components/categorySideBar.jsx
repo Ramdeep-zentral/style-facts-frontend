@@ -24,7 +24,7 @@ const CategorySideBar = () => {
   }, []);
   return (
     <div>
-      <h2>Categories</h2>
+      <h1>Categories</h1>
       <ul className="flex lg:flex-col flex-row flex-wrap gap-2 mt-5">
         {categories.map((category) => (
           <Link key={category.id} href={`/search/${category.name}`}>

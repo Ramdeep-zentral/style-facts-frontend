@@ -123,7 +123,9 @@ const StoryForm = () => {
 
   // --- Render ---
   return (
-    <form className="submit-story-form" onSubmit={handleSubmit}>
+    <>
+    <h1>Create Your Story</h1>
+    <form className="submit-story-form mt-10" onSubmit={handleSubmit}>
       <SuccessDialog
         openSuccessDialog={openSuccessDialog}
         setOpenSuccessDialog={setOpenSuccessDialog}
@@ -131,6 +133,7 @@ const StoryForm = () => {
       <FormInput
         label="Title"
         name="title"
+        autoComplete="off"
         value={formData.title}
         onChange={handleChange}
         error={formErrors.title?.[0]}
@@ -138,12 +141,14 @@ const StoryForm = () => {
       <FormInput
         label="Excerpt"
         name="excerpt"
+        autoComplete="off"
         value={formData.excerpt}
         onChange={handleChange}
         error={formErrors.excerpt?.[0]}
       />
       <FormMarkdownEditor
         label="Content"
+        name="content"
         value={formData.content}
         onChange={(value) =>
           setFormData((prev) => ({ ...prev, content: value }))
@@ -154,11 +159,13 @@ const StoryForm = () => {
       />
       <FormFileInput
         label="Picture"
+        name="picture"
         onChange={(file) => setFormData((prev) => ({ ...prev, image: file }))}
         error={formErrors.image?.[0]}
       />
       <FormCategorySelect
         categories={categories}
+        name="category"
         value={formData.category}
         onChange={(value) =>
           setFormData((prev) => ({ ...prev, category: value }))
@@ -167,6 +174,7 @@ const StoryForm = () => {
       />
       <FormTagsCheckboxes
         tags={tags}
+        name="tags"
         selectedTags={formData.tags}
         onChange={(newTags) =>
           setFormData((prev) => ({ ...prev, tags: newTags }))
@@ -175,6 +183,7 @@ const StoryForm = () => {
       />
       <FormSubmitButton value={loading ? 'Submitting...' : 'Submit Your Story'} />
     </form>
+    </>
   );
 };
 

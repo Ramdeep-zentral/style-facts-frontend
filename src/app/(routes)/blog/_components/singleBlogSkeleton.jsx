@@ -20,7 +20,7 @@ const SingleBlogSkeleton = () => {
             <Skeleton className="h-6 w-2/3 bg-gray-200 dark:bg-gray-700" />
             <Skeleton className="h-6 w-3/4 bg-gray-200 dark:bg-gray-700" />
             <Skeleton className="h-6 w-1/2 bg-gray-200 dark:bg-gray-700" />
-            <Skeleton className="h-6 w-4/5 bg-gray-200 dark:bg-gray-700" />
+            <Skeleton className="h-6 w-4/5 bg-gray-200 dark:bg-gr            git push -u origin mainay-700" />
           </div>
         </div>
         <div className="hidden lg:block basis-[45vw] h-[700px] w-[35vw] fixed top-0 -z-10 right-0 overflow-hidden">

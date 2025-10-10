@@ -205,6 +205,15 @@
   .blog-image-style{
     @apply h-[400px] relative overflow-hidden border border-black dark:border-white;
   }
+  .submit-story-form input, .EasyMDEContainer .CodeMirror, .editor-toolbar, button{
+    @apply !border-black dark:!border-white
+  }
+  .editor-toolbar{
+    @apply !flex !gap-2;
+  }
+  .editor-statusbar{
+    @apply !text-black;
+  }
   .bg-dark{
     .blog-image-style{
       @apply border border-white;
