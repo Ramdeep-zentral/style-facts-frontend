@@ -16,10 +16,13 @@ const BlogGrid = () => {
     try {
       setLoading(true);
       const resp = await GlobalApi.GetBlogs();
-      setBlogs(resp.data.data);
+  // Sort blogs by publishedDate descending (most recent first)
+  const sortedBlogs = [...resp.data.data].sort((a, b) => new Date(b.publishedDate) - new Date(a.publishedDate));
+  setBlogs(sortedBlogs);
       setLoading(false);
     } catch (error) {
       console.error("Error fetching blogs:", error);
+      toast.error("Failed to fetch blogs");
       setLoading(false);
     }
   };

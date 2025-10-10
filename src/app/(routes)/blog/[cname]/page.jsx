@@ -29,7 +29,6 @@ const SingleBlogPage = ({ params }) => {
       try {
         const resp = await GlobalApi.GetSingleBlog(cname);
         setBlog(resp.data.data[0]);
-        console.log(resp.data.data[0]);
       } catch (error) {
         setBlog(null);
         console.error("Error fetching single blog:", error);
