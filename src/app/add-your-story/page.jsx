@@ -3,12 +3,12 @@ import StoryForm from "./_components/storyForm";
 
 // Add Your Story Page
 const AddYourStoryPage = () => (
-  <div className="lg:pl-20 pl-5 pr-5 lg:pr-0">
-    <div className="lg:flex lg:gap-20">
+  <div className="lg:pl-10 2xl:pl-20 pl-5 pr-5 lg:pr-10 xl:pr-0">
+    <div className="xl:flex lg:gap-20">
       <div className="basis-[60%] py-20">
         <StoryForm />
       </div>
-      <div className="basis-[40%] relative hidden lg:block">
+      <div className="basis-[40%] relative hidden xl:block">
         <img
           src="/hannah-olinger-8eSrC43qdro-unsplash.jpg"
           alt="..."

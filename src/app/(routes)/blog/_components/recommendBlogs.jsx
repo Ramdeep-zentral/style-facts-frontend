@@ -28,7 +28,7 @@ const RecommendBlogs = ({ currentArticle }) => {
           <Button
             onClick={fetchRecommendations}
             disabled={loading || !currentArticle}
-            variant="outlineBlack"
+            variant="secondary"
           >
             {loading ? "Generating..." : "Generate AI Related Articles"}
           </Button>

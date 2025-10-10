@@ -47,8 +47,8 @@ const SingleBlogPage = ({ params }) => {
 
   return (
     <>
-    <div className="lg:pl-20 pl-5 pr-5 lg:pr-0 single-blog-page relative overflow-hidden">
-      <div className="flex lg:flex-row flex-col-reverse lg:gap-20 min-h-screen">
+    <div className="xl:pl-20 pl-5 pr-5 xl:pr-0 single-blog-page relative overflow-hidden">
+      <div className="flex xl:flex-row flex-col-reverse xl:gap-20 min-h-screen">
         <div className="basis-[55vw] lg:py-20 py-10">
           <div className="content flex flex-col gap-10 lg:mb-20 mb-10 border-b border-black lg:pb-20 pb-10">
             <div className="blog-published-date">{blog.publishedDate}</div>
@@ -68,7 +68,7 @@ const SingleBlogPage = ({ params }) => {
           </div>
         </div>
 
-        <div className="hidden lg:block basis-[45vw] h-[700px] w-[35vw] fixed top-0 -z-10 right-0 overflow-hidden">
+        <div className="hidden xl:block basis-[45vw] h-screen  w-[35vw] fixed top-0 -z-10 right-0 overflow-hidden">
           <Image
             src={blog.image?.url}
             alt={blog.title}
@@ -76,12 +76,11 @@ const SingleBlogPage = ({ params }) => {
             className="object-cover"
           />
         </div>
-        <div className="lg:hidden mt-5">
+        <div className="xl:hidden mt-5 relative h-[300px] lg:h-[500px] w-full overflow-hidden right-0">
           <Image
             src={blog.image?.url}
             alt={blog.title}
-            width={800}
-            height={600}
+            fill
             className="object-cover"
           />
         </div>

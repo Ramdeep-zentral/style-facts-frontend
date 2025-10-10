@@ -8,7 +8,7 @@ const BlogCard = ({ imageUrl, title, date, excerpt, grid }) => {
     <>
       {grid === true ? (
         <div className="blog-wrapper flex lg:flex-row flex-col items-center gap-6">
-          <div className="basis-1/2 relative h-[400px] w-[400px] group overflow-hidden border border-black dark:border-white">
+          <div className="basis-1/2 relative h-[400px] 2xl:h-[600px] w-[400px] group overflow-hidden border border-black dark:border-white">
             {imageUrl && (
               <Image src={imageUrl} alt={title} fill className="blog-image" />
             )}

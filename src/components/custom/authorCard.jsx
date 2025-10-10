@@ -9,7 +9,7 @@ const AuthorCard = () => {
           src="/PAT_7326_1-min.jpg"
           alt="author"
           fill
-          className="border border-black"
+          className="border border-black p-1.5"
         />
       </div>
       <div className="flex flex-col gap-3 author-wrapper items-end ml-auto">

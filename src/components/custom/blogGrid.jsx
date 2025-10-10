@@ -40,7 +40,7 @@ const BlogGrid = () => {
           </div>
 
           {/* First 3 blogs in 3 columns */}
-          <div className="pb-28 lg:px-40">
+          <div className="pb-28 xl:px-40">
             <div className="container">
               <ul className="grid lg:grid-cols-3 gap-20 mt-12 list-none p-0 m-0">
                 {loading ? (
@@ -67,9 +67,9 @@ const BlogGrid = () => {
           </div>
 
           {/* Rest of the blogs in a single column with new style */}
-          <div className="lg:px-40 border-y border-black">
-            <div className="flex lg:flex-row flex-col justify-between my-28 gap-40">
-              <div className="basis-[80vw]">
+          <div className="lg:px-10 xl:px-40 border-y border-black">
+            <div className="flex xl:flex-row flex-col justify-between my-28 gap-40">
+      
                 <ul className="flex flex-col gap-20 list-none p-0 m-0">
                   {loading ? (
                     <>
@@ -93,16 +93,14 @@ const BlogGrid = () => {
                     ))
                   )}
                 </ul>
-              </div>
-              <div className="basis-[20vw]">
-                <AuthorCard />
-              </div>
+              
+             
             </div>
           </div>
 
           {/* show remaining blogs in 3 columns only if there are 6 or more blogs */}
           {blogs.length >= 6 && visibleCount > 5 && (
-            <div className="border-b border-black py-28 px-40">
+            <div className="border-b border-black py-28 xl:px-40">
               <div className="container">
                 <ul className="grid grid-cols-3 gap-20 mt-12 list-none p-0 m-0">
                   {loading ? (
@@ -132,7 +130,7 @@ const BlogGrid = () => {
 
           {visibleCount < blogs.length && (
             <div className="m-auto text-center mt-10">
-              <Button className="mx-auto mt-6" onClick={loadMoreBlogs}>Load More</Button>
+              <Button variant="secondary" className="mx-auto mt-6" onClick={loadMoreBlogs}>Load More</Button>
             </div>
           )}
         </div>

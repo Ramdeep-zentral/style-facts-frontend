@@ -57,7 +57,7 @@
   --popover-foreground: oklch(0.13 0.028 261.692);
   --primary: oklch(0.21 0.034 264.665);
   --primary-foreground: oklch(0.985 0.002 247.839);
-  --secondary: #dacba9;
+  --secondary: #b7917e;
   --secondary-foreground: oklch(0.21 0.034 264.665);
   --muted: oklch(0.967 0.003 264.542);
   --muted-foreground: oklch(0.551 0.027 264.364);
@@ -139,7 +139,7 @@
      font-family: outfit, sans-serif;
   }
   .container{
-    @apply m-auto px-5 lg:px-0;
+    @apply m-auto px-5 lg:px-10 xl:px-0;
   }
   h1{
     @apply lg:text-8xl text-5xl font-carefree-serif;
@@ -188,7 +188,7 @@
     }
   }
   .blog-image{
-    @apply  w-[300px] h-[400px] object-cover;
+    @apply  w-[300px] h-[400px] object-cover p-1.5;
   }
   .submit-story-form label{
     @apply mb-4 font-medium;
@@ -200,10 +200,10 @@
     @apply dark:!border-[#32363f]
   }
   .blog-published-date{
-    @apply text-sm font-outfit bg-black text-white px-2 py-1 w-fit;
+    @apply text-sm font-outfit bg-secondary text-white px-2 py-1 w-fit;
   }
   .blog-image-style{
-    @apply h-[400px] relative overflow-hidden border border-black dark:border-white;
+    @apply h-[400px] 2xl:h-[600px] relative overflow-hidden border border-black dark:border-white;
   }
   .submit-story-form input, .EasyMDEContainer .CodeMirror, .editor-toolbar, button{
     @apply !border-black dark:!border-white
