@@ -1,27 +1,22 @@
 "use client";
+import Image from "next/image";
 import StoryForm from "./_components/storyForm";
 
 // Add Your Story Page
 const AddYourStoryPage = () => (
-  <div className="lg:pl-10 2xl:pl-20 pl-5 pr-5 lg:pr-10 xl:pr-0">
-    <div className="xl:flex lg:gap-20">
-      <div className="basis-[60%] py-20">
+  <div className="">
+    <div className="relative h-[300px] md:h-[400px] xl:h-[450px] overflow-hidden">
+      <Image
+        src="/raden-prasetya-EvjmSg1xurI-unsplash.jpg"
+        layout="fill"
+        className="absolute inset-0 w-full h-full object-cover object-center"
+        alt="Add Your Story"
+      />
+        </div>
+      <div className="container xl:px-40 py-20 bg-white">
         <StoryForm />
       </div>
-      <div className="basis-[40%] relative hidden xl:block">
-        <img
-          src="/hannah-olinger-8eSrC43qdro-unsplash.jpg"
-          alt="..."
-          style={{
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-            position: "absolute",
-            inset: 0,
-          }}
-        />
-      </div>
-    </div>
+  
   </div>
 );
 

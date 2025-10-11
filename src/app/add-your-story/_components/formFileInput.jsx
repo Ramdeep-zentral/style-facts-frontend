@@ -8,6 +8,7 @@ const FormFileInput = ({ label = 'Picture', onChange, error }) => (
     <Input
       id="picture"
       type="file"
+      accept="image/jpeg,image/png"
       onChange={e => onChange(e.target.files[0])}
     />
     {error && <p className="text-red-500 text-xs mt-1">{error}</p>}

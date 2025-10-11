@@ -7,7 +7,7 @@ const BlogCardSkeleton = ({ grid }) => {
       {grid === true ? (
         <div className="flex items-center gap-6">
           <div className="basis-1/2">
-            <Skeleton className=" w-[300px] h-[400px] object-cover bg-gray-200 animate-pulse" />
+            <Skeleton className=" w-[300px] h-[400px] 2xl:h-[600px] object-cover bg-gray-200 animate-pulse" />
           </div>
           <div className="basis-1/2 flex flex-col gap-4">
             <Skeleton className="text-sm font-bodoni-moda bg-gray-200 h-4 w-24 rounded animate-pulse" />
@@ -17,7 +17,7 @@ const BlogCardSkeleton = ({ grid }) => {
         </div>
       ) : (
         <div className="single-news-item">
-          <div className="h-[400px] relative">
+          <div className="h-[400px] 2xl:h-[600px] relative">
             <Skeleton className="object-cover w-full h-full bg-gray-200 animate-pulse" />
           </div>
           <div className="text-wrapper">

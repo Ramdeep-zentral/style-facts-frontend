@@ -1,6 +1,7 @@
 import BlogCard from "@/components/custom/blogCard";
 import { Button } from "@/components/ui/button";
-import { Link } from "lucide-react";
+import { Spinner } from "@/components/ui/spinner";
+import Link from "next/link";
 import React, { useState } from "react";
 
 const RecommendBlogs = ({ currentArticle }) => {
@@ -30,7 +31,13 @@ const RecommendBlogs = ({ currentArticle }) => {
             disabled={loading || !currentArticle}
             variant="secondary"
           >
-            {loading ? "Generating..." : "Generate AI Related Articles"}
+            {loading ? (
+              <>
+                <Spinner className="inline-block mr-1 align-middle" /> Generating...
+              </>
+            ) : (
+              "Generate AI Related Articles"
+            )}
           </Button>
         </div>
       )}

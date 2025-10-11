@@ -9,6 +9,7 @@ import FormSubmitButton from "./formSubmitButton";
 import { storySchema } from "@/lib/validation-rules";
 import SuccessDialog from "./successDialog";
 import { toast } from "sonner";
+import { Spinner } from "@/components/ui/spinner";
 
 // --- State ---
 const initialFormData = {
@@ -181,7 +182,7 @@ const StoryForm = () => {
         }
         error={formErrors.tags?.[0]}
       />
-      <FormSubmitButton value={loading ? 'Submitting...' : 'Submit Your Story'} />
+      <FormSubmitButton value={loading ? <><Spinner className="inline-block mr-1 align-middle" />Submitting...</> : 'Submit Your Story'} />
     </form>
     </>
   );

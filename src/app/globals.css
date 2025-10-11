@@ -209,7 +209,7 @@
     @apply !border-black dark:!border-white
   }
   .editor-toolbar{
-    @apply !flex !gap-2;
+    @apply xl:!flex !gap-2;
   }
   .editor-statusbar{
     @apply !text-black;
