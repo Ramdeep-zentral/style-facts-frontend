@@ -1,7 +1,27 @@
-<<<<<<< HEAD
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Style•Facts — Frontend (Next.js)
 
-## Getting Started
+Modern, accessible, magazine-style blog UI for Style•Facts.
+Powered by Next.js, Strapi (CMS), and optional AI helpers (summaries & related posts).
+
+✨ Features
+
+Clean browsing experience: categories, featured/latest sections
+Article page with great typography + dark/light theme (persisted)
+AI helpers: Summarize content and Recommend related posts
+Accessible by default (keyboard/focus/labels)
+Fast by design: image optimization, SSR/ISR
+
+
+🧱 Tech Stack
+
+Framework: Next.js (App Router)
+CMS: Strapi (REST)
+Styles: Tailwind / Shadcn
+AI: Google Gemini
+Deployment: Vercel
+
+
+🚀 Quick Start
 
 First, run the development server:
 
@@ -35,6 +55,3 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-=======
-# style-facts-frontend
->>>>>>> 068e88d19d2e092d97fef53eb75cb2eab7eb07fd

@@ -36,7 +36,7 @@ const RecommendBlogs = ({ currentArticle }) => {
                 <Spinner className="inline-block mr-1 align-middle" /> Generating...
               </>
             ) : (
-              "Generate AI Related Articles"
+              "Generate AI Related Posts"
             )}
           </Button>
         </div>
