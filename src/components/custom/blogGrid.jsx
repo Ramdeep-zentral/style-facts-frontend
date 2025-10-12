@@ -70,7 +70,7 @@ const BlogGrid = () => {
           </div>
 
           {/* Rest of the blogs in a single column with new style */}
-          <div className="lg:px-10 xl:px-40 border-y border-black">
+          <div className="lg:px-10 xl:px-40 border-y border-black dark:border-white">
             <div className="flex xl:flex-row flex-col justify-between my-28 gap-40">
       
                 <ul className="flex flex-col gap-20 list-none p-0 m-0">
@@ -103,7 +103,7 @@ const BlogGrid = () => {
 
           {/* show remaining blogs in 3 columns only if there are 6 or more blogs */}
           {blogs.length >= 6 && visibleCount > 5 && (
-            <div className="border-b border-black py-28 xl:px-40">
+            <div className="border-b border-black dark:border-white py-28 xl:px-40">
               <div className="container">
                 <ul className="grid grid-cols-3 gap-20 mt-12 list-none p-0 m-0">
                   {loading ? (

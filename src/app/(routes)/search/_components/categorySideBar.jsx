@@ -32,7 +32,7 @@ const CategorySideBar = () => {
               key={category.id}
 
               className={`py-2 border px-4 cursor-pointer ${
-                selectedCategory === category.name ? "bg-black text-white" : ""
+                selectedCategory === category.name ? "bg-black text-white dark:bg-white dark:text-black" : ""
               }`}
             >
               {category.name}

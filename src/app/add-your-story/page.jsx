@@ -13,7 +13,7 @@ const AddYourStoryPage = () => (
         alt="Add Your Story"
       />
         </div>
-      <div className="container xl:px-40 py-20 bg-white">
+      <div className="container xl:px-40 py-20 bg-white dark:bg-black">
         <StoryForm />
       </div>
   
