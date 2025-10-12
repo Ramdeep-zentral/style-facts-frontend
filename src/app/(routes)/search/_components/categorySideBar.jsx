@@ -12,10 +12,10 @@ const CategorySideBar = () => {
   const fetchCategories = async () => {
     try {
       const resp = await GlobalApi.GetCategories();
-      console.log(resp.data);
       setCategories(resp.data.data);
     } catch (error) {
       console.error("Error fetching categories:", error);
+      setCategories([]);
     }
   };
 
