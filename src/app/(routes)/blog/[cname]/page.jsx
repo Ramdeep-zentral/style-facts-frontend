@@ -7,6 +7,7 @@ import Markdown from "react-markdown";
 import SingleBlogSkeleton from "../_components/singleBlogSkeleton";
 import gsap from "gsap";
 import RecommendBlogs from "../_components/recommendBlogs";
+import ChatHelp from "../_components/chatHelp";
 
 const SingleBlogPage = ({ params }) => {
   useEffect(() => {
@@ -88,6 +89,7 @@ const SingleBlogPage = ({ params }) => {
     <div className="py-20 bg-black text-white">
       <RecommendBlogs currentArticle={blog} />
     </div>
+    <ChatHelp blogId={blog.id} />
     </>
   );
 };
